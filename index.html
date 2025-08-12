@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Friendbook</title>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBKeHyFnmY6FR9lb8GH6PPHY0Ev6Oh2YGY",
+    authDomain: "friendbook-web.firebaseapp.com",
+    databaseURL: "https://friendbook-web-default-rtdb.firebaseio.com/",
+    projectId: "friendbook-web",
+    storageBucket: "friendbook-web.firebasestorage.app",
+    messagingSenderId: "556539646436",
+    appId: "1:556539646436:web:e9c26331c668443ea3f7f1",
+    measurementId: "G-VG2X3JN1SW"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.2/dist/emoji-button.min.js"></script>
+
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Friendbook</div>
+    <nav class="nav">
+      <input type="text" class="search-input" placeholder="Search Friendbook" />
+      <button class="btn login-btn">Login</button>
+      <button class="btn signup-btn">Sign Up</button>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <aside class="sidebar">
+      <div class="profile-box">
+        <img src="https://i.pravatar.cc/100" alt="Profile" class="profile-pic" />
+        <h3>John Doe</h3>
+        <p>Welcome to Friendbook</p>
+      </div>
+      <ul class="menu-list">
+        <li>News Feed</li>
+        <li>Friends</li>
+        <li>Messages</li>
+        <li>Notifications</li>
+        <li>Settings</li>
+      </ul>
+    </aside>
+
+<section class="create-post">
+  <textarea id="postInput" placeholder="What's on your mind?" rows="3"></textarea>
+
+  <input type="file" id="mediaInput" accept="image/*,video/*" />
+
+  <div class="post-options">
+    <button id="emojiBtn" title="Add Emoji">😊</button>
+    <button id="locationBtn" title="Add Location">📍</button>
+    <span id="locationDisplay" style="margin-left: 10px; font-size: 0.9em; color: #555;"></span>
+  </div>
+
+  <button id="postBtn">Post</button>
+</section>
+
+
+
+    <section class="feed">
+      <div class="post-box">
+        <div class="post-header">
+          <img src="https://i.pravatar.cc/50" alt="User" class="post-user-pic" />
+          <div>
+            <h4>Jane Smith</h4>
+            <small>2 hours ago</small>
+          </div>
+        </div>
+        <p>This is my first post on Friendbook! Hello everyone.</p>
+        <div class="post-actions">
+          <button class="like-btn">Like</button>
+          <button class="comment-btn">Comment</button>
+          <button class="share-btn">Share</button>
+        </div>
+      </div>
+
+      <div class="post-box">
+        <div class="post-header">
+          <img src="https://i.pravatar.cc/51" alt="User" class="post-user-pic" />
+          <div>
+            <h4>Mark Lee</h4>
+            <small>5 hours ago</small>
+          </div>
+        </div>
+        <p>Enjoying the modern look of Friendbook!</p>
+        <div class="post-actions">
+          <button class="like-btn">Like</button>
+          <button class="comment-btn">Comment</button>
+          <button class="share-btn">Share</button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="right-sidebar">
+      <h3>Contacts</h3>
+      <ul class="contacts-list">
+        <li>Sarah</li>
+        <li>Michael</li>
+        <li>Emma</li>
+        <li>David</li>
+        <li>Olivia</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 Friendbook. All rights reserved.
+  </footer>
+</body>
+</html>
